@@ -1,0 +1,31 @@
+.title-ciano {
+    margin-left: 15px !important;
+}
+
+.width-1{
+    width: 30px;
+}
+
+.width-2{
+    width: 28px;
+}
+
+.width-3{
+    width: 32px;
+}
+
+.width-4{
+    width: 27px;
+}
+
+.div-about{
+    display:none;
+}
+
+.div-contact{
+    display:none;
+}
+
+.div-service{
+    display:none;
+}
