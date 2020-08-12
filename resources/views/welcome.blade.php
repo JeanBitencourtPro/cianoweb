@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175249118-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175249118-1');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -81,7 +90,7 @@
                             <div class="media my-3">
                                 <i class="fas fa-bookmark fa-3x p-3 mr-4"></i>
                                 <div class="media-body">
-                                    <p>A Ciano Web foca na satisfação de seus clientes, buscando sempre o melhor para ambos. Queremos poder ajudar cada vez mais o seu negócio, para ir além, nós da A Ciano acredita que juntos, podemos buscar sempre a melhor maneira de que você consiga mostrar a sua arte e a qualidade de seus produtos e serviços.</p>
+                                    <p>A Ciano Web foca na satisfação de seus clientes, buscando sempre o melhor para ambos. Queremos poder ajudar cada vez mais o seu negócio, para ir além. Nós da Ciano, acreditamos que juntos podemos buscar sempre a melhor maneira de que você consiga mostrar a sua arte e a qualidade de seus produtos e serviços.</p>
                                 </div> 
                             </div>                        
                         </section>
