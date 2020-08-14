@@ -68,13 +68,14 @@ $('.enviar-mensagem').on('click', function () {
               'mensagem': mensagem
           },
           success: function (data) {
-            $('.div-contact').css("display", "none");
-            $('.div-sucess').css("display", "block");
+            
           },
           error: function () {
               return;
           }
       });
+      $('.div-contact').css("display", "none");
+      $('.div-sucess').css("display", "block");
   }
 });
 
