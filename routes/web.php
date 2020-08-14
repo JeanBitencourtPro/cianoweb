@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'HomeController@welcome')->name('welcome');
+
+/******* Envio de mensagem ********/
+Route::post('enviar_mensagem', 'HomeController@enviar_mensagem')->name('enviar_mensagem');

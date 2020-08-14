@@ -1,26 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175249118-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-175249118-1');
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ciano Web</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
-    <link href="{{ URL::asset('assets/css/main.css') }}" rel="stylesheet" />
-    <link href="{{ URL::asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" />
-    <link href="{{ URL::asset('assets/fontawesome/css/all.min.css') }}" rel="stylesheet" /> 
-    <link href="{{ URL::asset('assets/css/templatemo-diagoona.css') }}" rel="stylesheet" />
-</head>
+@include('include.head')
 
 <body>
     <div class="tm-container">        
@@ -135,21 +116,32 @@
                         <section class="tm-content tm-contact">
                             <h2 class="mb-4 tm-content-title">Contato</h2>
                             <p class="mb-85">Nos envie uma mensagem que entraremos em contato, vamos desenvolver soluções para o seu negócio!</p>
-                            <form id="contact-form" action="" method="POST">
-                                <div class="form-group mb-4">
-                                    <input type="text" name="name" class="form-control" placeholder="Nome" required="" />
-                                </div>
-                                <div class="form-group mb-4">
-                                    <input type="telefone" name="telefone" class="form-control" id="telefone" placeholder="Telefone" required="" pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}"/>
-                                </div>
-                                <div class="form-group mb-4">
-                                    <input type="email" name="email" class="form-control" placeholder="Email" required="" />
-                                </div>
-                                <div class="form-group mb-5">
-                                    <textarea rows="6" name="message" class="form-control" placeholder="Sua mensagem..." required=""></textarea>
-                                </div>
-                                <div class="text-right">
-                                    <button type="submit" class="btn btn-big btn-primary">Enviar</button>
+                            <form id="contact-form" action="{{ route('enviar_mensagem') }}" method="POST">
+                                <div class="form">
+                                    <div class="form-group mb-4">
+                                        <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome" required="" />
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <input type="text" id="telefone" name="telefone" class="form-control" placeholder="Telefone" />
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <input type="email" id="email" name="email" class="form-control" placeholder="Email" required="" />
+                                    </div>
+                                    <div class="form-group mb-5">
+                                        <textarea rows="6" id="mensagem"  name="mensagem" class="form-control" placeholder="Sua mensagem..." required=""></textarea>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="payment">
+                                            <img src="{{ URL::asset('assets/img/Visa.png') }}" class="width-1" title="Visa">
+                                            <img src="{{ URL::asset('assets/img/Mastercard.png') }}" class="width-1" title="MasterCard">
+                                            <img src="{{ URL::asset('assets/img/Mater.png') }}" class="width-1" title="American Express">
+                                            <img src="{{ URL::asset('assets/img/Diners.png') }}" class="width-1" title="Diners">
+                                            <img src="{{ URL::asset('assets/img/boleto.jpg') }}" class="width-2" title="Boleto">
+                                            <img src="{{ URL::asset('assets/img/Elo.png') }}" class="width-3" title="Elo">
+                                            <img src="{{ URL::asset('assets/img/hiper.jpg') }}" class="width-4" title="Hiper">
+                                        </div>
+                                        <button type="button" class="btn btn-big btn-primary enviar-mensagem">Enviar</button>
+                                    </div>
                                 </div>
                             </form>
                         </section>
@@ -168,14 +160,7 @@
             </div>        
             <div class="tm-col-right tm-col-footer">
                 <footer class="tm-site-footer text-right">
-                    <p class="mb-0">Desenvolvido por Ciano Web - 
-                    <img src="{{ URL::asset('assets/img/Visa.png') }}" class="width-1" title="Visa">
-                    <img src="{{ URL::asset('assets/img/Mastercard.png') }}" class="width-1" title="MasterCard">
-                    <img src="{{ URL::asset('assets/img/Mater.png') }}" class="width-1" title="American Express">
-                    <img src="{{ URL::asset('assets/img/Diners.png') }}" class="width-1" title="Diners">
-                    <img src="{{ URL::asset('assets/img/boleto.jpg') }}" class="width-2" title="Boleto">
-                    <img src="{{ URL::asset('assets/img/Elo.png') }}" class="width-3" title="Elo">
-                    <img src="{{ URL::asset('assets/img/hiper.jpg') }}" class="width-4" title="Elo">
+                    <p class="mb-0">Desenvolvido por Ciano Web 2020
                 </footer>
             </div>  
         </div>
@@ -187,13 +172,6 @@
         </div>
     </div>
     
-    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="{{ URL::asset('assets/js/maskMoney.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('assets/js/jquery.mask.min.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('assets/js/menu-home.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('assets/js/jquery-1.12.4.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('assets/js/bootstrap.min.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('assets/js/jquery.backstretch.min.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('assets/js/templatemo-script.js') }}"></script>
+    @include('include.js')
 </body>
 </html>
