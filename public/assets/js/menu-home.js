@@ -2,6 +2,7 @@ $('.inicio').on('click', function () {
   $('.div-contact').css("display", "none");
   $('.div-service').css("display", "none");
   $('.div-about').css("display", "none");
+  $('.div-sucess').css("display", "none");
   $('.div-home').css("display", "block");
 });
 
@@ -9,6 +10,7 @@ $('.sobre').on('click', function () {
   $('.div-home').css("display", "none");
   $('.div-contact').css("display", "none");
   $('.div-service').css("display", "none");
+  $('.div-sucess').css("display", "none");
   $('.div-about').css("display", "block");
 });
 
@@ -16,6 +18,7 @@ $('.servicos').on('click', function () {
   $('.div-home').css("display", "none");
   $('.div-contact').css("display", "none");
   $('.div-about').css("display", "none");
+  $('.div-sucess').css("display", "none");
   $('.div-service').css("display", "block");
 });
 
@@ -23,6 +26,7 @@ $('.contato').on('click', function () {
   $('.div-home').css("display", "none");
   $('.div-about').css("display", "none");
   $('.div-service').css("display", "none");
+  $('.div-sucess').css("display", "none");
   $('.div-contact').css("display", "block");
 });
 
@@ -64,15 +68,13 @@ $('.enviar-mensagem').on('click', function () {
               'mensagem': mensagem
           },
           success: function (data) {
-              console.log(data);
+            $('.div-contact').css("display", "none");
+            $('.div-sucess').css("display", "block");
           },
           error: function () {
-              // alert('erro');
               return;
           }
       });
-
-      // $('.mensagem-enviada-js').removeClass('hide');
-      $('#contact-form').addClass('hide');
   }
 });
+

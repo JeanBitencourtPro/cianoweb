@@ -148,6 +148,18 @@
                     </main>
                 </div>
             </div>
+
+            <div class="div-sucess hidden">
+                <div class="tm-row">
+                    <div class="tm-col-left"></div>
+                    <main class="tm-col-right tm-contact-main"> <!-- Content -->
+                        <section class="tm-content tm-contact">
+                            <h2 class="mb-4 tm-content-title">Obrigado!</h2>
+                            <p class="mb-85">Logo logo entraremos em contato!</p>
+                        </section>
+                    </main>
+                </div>
+            </div>
         </div>        
 
         <div class="tm-row">
