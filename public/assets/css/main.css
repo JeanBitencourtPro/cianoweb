@@ -30,6 +30,10 @@
     display:none;
 }
 
+.div-sucess{
+    display:none;
+}
+
 .form{
     margin-top: -60px;
 }
