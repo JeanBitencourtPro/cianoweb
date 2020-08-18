@@ -9,10 +9,9 @@
             <div class="tm-row pt-4">
                 <div class="tm-col-left">
                     <div class="tm-site-header media">
-                        <a href="#"><img src="{{ URL::asset('/assets/img/ciano.png') }}" class="rubik-logo" height="85"></a>
+                        <a href="#"><img src="{{ URL::asset('/assets/img/cwl.png') }}" class="rubik-logo" height="85"></a>
                         <div class="media-body title-ciano">
-                            <h1 class="tm-sitename text-uppercase">CIANO</h1>
-                            <p class="tm-slogon">Desenvolvimento Web</p>
+                            <a href="#"><img src="{{ URL::asset('/assets/img/ciano-desweb.png') }}" height="100"></a>
                         </div>        
                     </div>
                 </div>
@@ -172,7 +171,7 @@
             </div>        
             <div class="tm-col-right tm-col-footer">
                 <footer class="tm-site-footer text-right">
-                    <p class="mb-0">Desenvolvido por Ciano Web 2020
+                    <p class="mb-0 footer-ciano">Desenvolvido por Ciano Web 2020
                 </footer>
             </div>  
         </div>

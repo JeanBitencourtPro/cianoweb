@@ -296,8 +296,8 @@ textarea {
 
     #tm-main-nav {
         position: fixed;
-        top: 50px;
-        right: 40px;
+        top: 0px;
+        right: 35px;
         padding-bottom: 0;
     }  
     
